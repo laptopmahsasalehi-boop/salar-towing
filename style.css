@@ -1,0 +1,2111 @@
+
+/* ================= COLORS ================= */
+:root {
+
+    /* رنگ اصلی */
+    --navy: #0b1f33;
+
+    /* سرمه‌ای روشن */
+    --blue: #12395b;
+
+    /* طلایی */
+    --gold: #d6a23a;
+
+    /* طلایی روشن */
+    --gold-light: #e5b85c;
+
+    /* پس‌زمینه */
+    --light: #f4f7fa;
+
+    /* سفید */
+    --white: #ffffff;
+
+    /* متن */
+    --text: #102a43;
+
+    /* متن خاکستری */
+    --gray: #667085;
+
+    /* مرزها */
+    --border: #d9e1e8;
+
+}
+
+@font-face {
+    font-family: myfont;
+    src: url(Vazirmatn/Vazirmatn-VariableFont_wght.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    background: #f4f7fa;
+    color: #102a43;
+    line-height: 1.8;
+    font-family: myfont;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+
+}
+
+button {
+    font-family: myfont;
+}
+
+
+
+
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    background: rgba(11, 31, 51, 0.95);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+
+.nav {
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+
+    font-size: 1.2rem;
+
+    font-weight: 800;
+
+}
+
+
+.logo span {
+
+    color: var(--gold);
+
+}
+
+
+/* ================= DESKTOP MENU ================= */
+
+.desktop-menu {
+
+    display: flex;
+    gap: 28px;
+
+}
+
+
+.desktop-menu a {
+
+    color: #dce6ef;
+
+    font-size: 0.9rem;
+
+    transition: 0.3s;
+
+}
+
+
+.desktop-menu a:hover {
+
+    color: var(--gold);
+
+}
+.desktop-menu i{
+  margin: 0 5px;
+}
+
+
+/* ================= HEADER CALL ================= */
+
+.header-call {
+
+    border: 1px solid var(--gold);
+
+    color: var(--gold);
+
+    padding: 7px 15px;
+
+    border-radius: 30px;
+
+    font-size: 0.85rem;
+
+    transition: 0.3s;
+
+}
+
+
+.header-call:hover {
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+}
+
+
+/* ================= MOBILE MENU BUTTON ================= */
+
+.menu-button {
+
+    display: none;
+
+    background: transparent;
+
+    color: white;
+
+    border: none;
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+
+}
+
+
+/* ================= MOBILE MENU ================= */
+
+.mobile-menu {
+
+    display: none;
+
+    background: var(--navy);
+
+    padding: 15px 25px;
+
+}
+
+
+.mobile-menu a {
+
+    display: block;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #29445d;
+
+    color: #dce6ef;
+
+}
+
+
+.mobile-menu a:hover {
+
+    color: var(--gold);
+
+}
+
+
+/* ================= HERO ================= */
+
+
+.hero {
+
+    min-height: 760px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    color: white;
+
+}
+
+
+/* ================= BACKGROUND ================= */
+
+.hero-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("img/bghero.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.03);
+
+    animation: heroZoom 12s ease-out forwards;
+
+    
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 22, 38, 0.92) 0%,
+            rgba(5, 22, 38, 0.62) 45%,
+            rgba(5, 22, 38, 0.30) 100%
+        );
+
+}
+
+
+/* نور ظریف */
+
+.hero-light {
+
+    position: absolute;
+
+    width: 600px;
+
+    height: 600px;
+
+    border-radius: 50%;
+
+    right: -250px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: rgba(218, 164, 47, 0.08);
+
+    filter: blur(80px);
+
+    z-index: 1;
+
+}
+
+
+/* ================= CONTENT ================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    padding: 80px 0;
+
+}
+
+
+/* ================= BADGE ================= */
+
+.hero-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 16px;
+
+    margin-bottom: 28px;
+
+    border: 1px solid rgba(218,164,47,0.35);
+
+    border-radius: 50px;
+
+    background: rgba(218,164,47,0.08);
+
+    color: #e2ac32;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    backdrop-filter: blur(8px);
+
+
+}
+
+
+.badge-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #dca52e;
+
+    box-shadow:
+        0 0 0 5px rgba(220,165,46,0.12);
+
+}
+
+
+/* ================= TITLE ================= */
+
+.hero-title-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 55px;
+
+    direction: ltr;
+
+}
+
+
+/* ================= LOGO ================= */
+
+.hero-logo {
+
+    width: 430px;
+
+    min-width: 330px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    opacity: 0;
+
+    transform: translateX(-80px) scale(0.85);
+
+    animation:
+        logoReveal 1s cubic-bezier(.22,.61,.36,1) 0.25s forwards;
+
+    position: relative;
+    top: 35px;
+}
+
+
+.hero-logo img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    filter:
+        drop-shadow(0 20px 35px rgba(0,0,0,0.45));
+
+
+}
+
+
+/* ================= TITLE ================= */
+
+.hero-title {
+
+    direction: rtl;
+
+    flex: 1;
+
+}
+
+
+.hero-title h1 {
+
+    margin: 0;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    line-height: 1.35;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    opacity: 0;
+
+    transform: translateX(35px);
+
+    animation:
+        titleReveal 1s cubic-bezier(.22,.61,.36,1) 0.45s forwards;
+
+}
+
+
+.hero-title h1 span {
+
+    color: var(--gold);
+
+    position: relative;
+
+    display: inline-block;
+
+}
+
+
+/* خط زیر سالار */
+
+.hero-title h1 span::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: -5px;
+
+    width: 100%;
+
+    height: 4px;
+
+    border-radius: 10px;
+
+    background: var(--gold);
+
+    transform: scaleX(0);
+
+    transform-origin: right;
+
+    animation:
+        lineReveal 0.8s ease 0.95s forwards;
+
+}
+
+
+/* ================= DESCRIPTION ================= */
+
+.hero-description {
+
+    max-width: 720px;
+
+    margin: 35px 0 30px;
+
+    color: #d8e1e8;
+
+    font-size: 1.25rem;
+
+    line-height: 2;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    animation:
+        heroReveal 0.8s ease 0.8s forwards;
+
+}
+
+
+/* ================= ACTIONS ================= */
+
+.hero-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    animation:
+        heroReveal 0.8s ease 1s forwards;
+
+}
+
+
+/* تماس اصلی */
+
+.hero-call {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 10px 22px 10px 12px;
+
+    min-width: 265px;
+
+    border-radius: 12px;
+
+    background: var(--gold);
+
+    color: #071c2d;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 12px 30px rgba(218,164,47,0.2);
+
+    transition: 0.3s ease;
+
+}
+
+
+.hero-call:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 35px rgba(218,164,47,0.32);
+
+}
+
+
+.call-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.25);
+
+    font-size: 1.15rem;
+
+}
+
+
+.call-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    direction: rtl;
+
+}
+
+
+.call-text small {
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    opacity: 0.75;
+
+}
+
+
+.call-text strong {
+
+    font-size: 1.15rem;
+
+    direction: ltr;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* محدوده */
+
+.hero-location {
+
+    height: 68px;
+
+    padding: 0 23px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    border-radius: 12px;
+
+    color: white;
+
+    text-decoration: none;
+
+    backdrop-filter: blur(8px);
+
+    background: rgba(255,255,255,0.05);
+
+    transition: 0.3s ease;
+
+}
+
+
+.hero-location:hover {
+
+    background: rgba(255,255,255,0.12);
+
+    border-color: rgba(218,164,47,0.7);
+
+}
+
+
+/* ================= TRUST ================= */
+
+.hero-trust {
+
+    display: flex;
+
+    gap: 28px;
+
+    margin-top: 28px;
+
+    color: #b9c9d5;
+
+    font-size: 0.9rem;
+
+    opacity: 0;
+
+    animation:
+        heroReveal 0.8s ease 1.2s forwards;
+
+}
+
+
+.hero-trust div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.hero-trust i {
+
+    color: var(--gold);
+
+}
+
+
+
+
+
+
+
+/* ================= HERO ANIMATIONS ================= */
+
+
+/* لوگو از سمت چپ وارد می‌شود */
+
+@keyframes logoReveal {
+
+    from {
+        opacity: 0;
+        transform: translateX(-80px) scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+}
+
+
+/* تیتر از سمت راست */
+
+@keyframes titleReveal {
+
+    from {
+        opacity: 0;
+        transform: translateX(70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* متن‌ها از پایین */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes heroZoom {
+
+    from {
+        transform: scale(1.03);
+    }
+
+    to {
+        transform: scale(1.10);
+    }
+
+}
+
+
+@keyframes lineReveal {
+
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+
+}
+
+
+
+/* ================= ABOUT ================= */
+
+.about {
+
+    background: var(--white);
+
+}
+
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+}
+
+
+.about-text h3 {
+
+    font-size: 1.8rem;
+
+    margin-bottom: 20px;
+
+    color: var(--navy);
+
+}
+
+
+.about-text p {
+
+    color: var(--gray);
+
+    margin-bottom: 15px;
+
+}
+
+
+.about-image img {
+
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow: 0 15px 40px rgba(11,31,51,0.15);
+
+}
+
+
+/* ================= PHONE BUTTON ================= */
+
+.phone-button {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    background: var(--navy);
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    direction: ltr;
+
+    transition: 0.3s;
+
+}
+
+
+.phone-button:hover {
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+}
+
+
+/* ================= SERVICES ================= */
+
+/* ================= SERVICES ================= */
+
+.services {
+
+    background: var(--light);
+
+    padding: 100px 0;
+
+}
+
+
+/* عنوان بخش */
+
+.section-title.center {
+
+    text-align: center;
+
+    margin-bottom: 65px;
+
+}
+
+
+.section-title.center p {
+
+    color: var(--gold);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+}
+
+
+.section-title.center h2 {
+
+    color: var(--navy);
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    font-weight: 800;
+
+    margin: 0;
+
+}
+
+
+/* خط طلایی زیر عنوان */
+
+.section-line {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 120px;
+
+    height: 3px;
+
+    background: var(--gold);
+
+    margin: 22px auto 15px;
+
+    position: relative;
+
+}
+
+
+.section-line::after {
+
+    content: "";
+
+    width: 12px;
+
+    height: 12px;
+
+    background: var(--gold);
+
+    border-radius: 50%;
+
+    position: absolute;
+
+}
+
+
+.section-subtitle {
+
+    color: var(--gray);
+
+    font-size: 1.1rem;
+
+}
+
+
+/* کارت‌ها */
+
+.service-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+/* کارت */
+
+.service-card {
+
+    position: relative;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 40px 30px 0;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    min-height: 480px;
+
+    transition: 0.35s ease;
+
+}
+
+
+/* خط طلایی بالای کارت */
+
+.service-top-line {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 130px;
+
+    height: 3px;
+
+    background: var(--gold);
+
+}
+
+
+/* افکت Hover */
+
+.service-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: rgba(218, 160, 38, 0.35);
+
+    box-shadow: 0 20px 45px rgba(11, 31, 51, 0.12);
+
+}
+
+
+/* آیکون */
+
+.service-icon {
+
+    width: 105px;
+
+    height: 105px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--gold);
+
+    font-size: 2.5rem;
+
+    background: #fff;
+
+    box-shadow: 0 8px 20px rgba(11,31,51,0.05);
+
+    transition: 0.35s;
+
+}
+
+
+.service-card:hover .service-icon {
+
+    transform: scale(1.08);
+
+    background: #fffaf0;
+
+}
+
+
+/* عنوان کارت */
+
+.service-card h3 {
+
+    color: var(--navy);
+
+    font-size: 1.35rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* خط کوچک زیر عنوان */
+
+.card-line {
+
+    display: block;
+
+    width: 45px;
+
+    height: 2px;
+
+    background: var(--gold);
+
+    margin: 0 auto 20px;
+
+}
+
+
+/* توضیحات */
+
+.service-card p {
+
+    color: var(--gray);
+
+    line-height: 2;
+
+    font-size: 1rem;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* تصویر پایین کارت */
+
+.service-image {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 155px;
+
+    background-position: center bottom;
+
+    background-repeat: no-repeat;
+
+    background-size: contain;
+
+    opacity: 0.18;
+
+    transition: 0.35s;
+
+    pointer-events: none;
+
+}
+
+
+.service-card:hover .service-image {
+
+    opacity: 0.30;
+
+    transform: scale(1.03);
+
+}
+
+
+/* تصاویر */
+
+.tow-image {
+
+    background-image: url("img/tow-truck.png");
+
+}
+
+
+.help-image {
+
+    background-image: url("img/roadside-help.png");
+
+}
+
+
+.area-image {
+
+    background-image: url("img/map-area.png");
+
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery-section {
+
+    background: white;
+
+}
+
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.gallery-item {
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+}
+
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 420px;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+
+}
+
+
+.gallery-item:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ================= AREAS ================= */
+
+.areas {
+
+    background: var(--navy);
+
+    color: white;
+
+}
+
+
+.areas .section-title h2 {
+
+    color: white;
+
+}
+
+
+.areas .section-title p {
+
+    color: var(--gold);
+
+}
+
+
+.area-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+.area-list span {
+
+    border: 1px solid #34516c;
+
+    padding: 10px 20px;
+
+    border-radius: 50px;
+
+    color: #dce6ef;
+
+    transition: 0.3s;
+
+}
+
+
+.area-list span:hover {
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+    border-color: var(--gold);
+
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+
+    background: white;
+
+}
+
+
+.contact-box {
+
+    background: var(--blue);
+
+    color: white;
+
+    padding: 50px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    box-shadow: 0 20px 50px rgba(11,31,51,0.15);
+
+}
+
+
+.contact-box p {
+
+    color: #b7c7d6;
+
+}
+
+
+.contact-box h2 {
+
+    color: white;
+
+}
+
+
+.contact-number {
+
+    direction: ltr;
+
+    font-size: clamp(1.5rem, 4vw, 3rem);
+
+    font-weight: 800;
+
+    color: var(--gold);
+
+    transition: 0.3s;
+
+}
+
+
+.contact-number:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {background: #071522;
+
+    color: #8fa0b1;
+
+}
+
+
+.footer-content {
+
+    min-height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* ================= IMAGE MODAL ================= */
+
+.image-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(5,22,38,0.96);
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+}
+
+
+.image-modal.active {
+
+    display: flex;
+
+}
+
+
+.image-modal img {
+
+    max-width: 95%;
+
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+}
+
+
+.close-modal {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 30px;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 3rem;
+
+    cursor: pointer;
+
+}
+
+
+.close-modal:hover {
+
+    color: var(--gold);
+
+}
+
+
+/* ================= ANIMATION ================= */
+
+.service-card,
+.about-grid,
+.gallery-item {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition: 0.7s;
+
+}
+
+
+.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* ================================================= */
+/* ================= RESPONSIVE ==================== */
+/* ================================================= */
+
+@media (max-width: 800px) {
+    .container {
+
+        width: min(100% - 28px, 1120px);
+
+    }
+
+
+    /* MENU */
+
+    .desktop-menu {
+
+        display: none;
+
+    }
+
+
+    .header-call {
+
+        display: none;
+
+    }
+
+
+    .menu-button {
+
+        display: block;
+
+    }
+
+
+    .mobile-menu.active {
+
+        display: block;
+
+    }
+
+
+    /* HERO */
+
+
+    /* ABOUT */
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .about-image img {
+
+        height: 350px;
+
+    }
+
+
+    /* SERVICES */
+
+    .service-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+    }
+
+    /* ================= SERVICES MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .services {
+
+        padding: 75px 0;
+
+    }
+
+
+    .section-title.center {
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .section-title.center h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .section-subtitle {
+
+        font-size: 0.95rem;
+
+    }
+
+
+    .service-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+    }
+
+
+    .service-card {
+
+        min-height: 430px;
+
+        padding: 35px 25px 0;
+
+    }
+
+
+    .service-icon {
+
+        width: 90px;
+
+        height: 90px;
+
+        font-size: 2.1rem;
+
+    }
+
+
+    .service-card h3 {
+
+        font-size: 1.25rem;
+
+    }
+
+
+    .service-card p {
+
+        font-size: 0.95rem;
+
+    }
+
+}
+
+
+    /* GALLERY */
+
+    .gallery {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .gallery-item img {
+
+        height: 330px;
+
+    }
+
+
+    /* CONTACT */
+
+    .contact-box {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 35px 25px;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer-content {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 5px;
+
+        padding: 20px 0;
+
+    }
+
+
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 450px) {
+
+   
+
+
+    .btn {
+
+        width: 100%;
+
+    }
+
+
+    .section {
+
+        padding: 70px 0;
+
+    }
+
+
+    .contact-number {
+
+        font-size: 1.5rem;
+
+    }
+
+}
+
+
+
+/*=========================================================
+===========================================================
+===========================================================*/
+
+/* =====================================================
+   HERO — MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* ================= HERO ================= */
+
+    .hero {
+        min-height: auto;
+        padding: 55px 0 45px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+
+    /* ================= BACKGROUND ================= */
+
+    .hero-bg {
+
+    background-size: auto 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+
+    }
+
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5, 22, 38, 0.90) 0%,
+                rgba(5, 22, 38, 0.78) 50%,
+                rgba(5, 22, 38, 0.94) 100%
+            );
+    }
+
+
+    .hero-light {
+        width: 350px;
+        height: 350px;
+        right: -180px;
+    }
+
+
+    /* ================= CONTENT ================= */
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 22px 35px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+    /* ================= BADGE ================= */
+
+    .hero-badge {
+        display: flex;
+        width: fit-content;
+        margin: 0 auto 25px;
+        font-size: 0.82rem;
+
+        /* انیمیشن */
+        opacity: 0;
+        animation: fadeUp 0.8s ease-out 0.1s forwards;
+    }
+
+
+    /* ================= LOGO + TITLE ================= */
+
+    .hero-title-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        direction: ltr;
+        width: 100%;
+    }
+
+
+    /* ================= LOGO ================= */
+
+    .hero-logo {
+        width: 220px;
+        min-width: 0;
+        max-width: 65vw;
+        margin: 0 auto;
+
+        position: relative;
+        top: 25px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* انیمیشن ورود از چپ */
+        opacity: 0;
+        transform: translateX(-80px) scale(0.85);
+
+        animation:
+            logoReveal 1s cubic-bezier(.22,.61,.36,1) 0.25s forwards;
+    }
+
+
+    .hero-logo img {
+        width: 100%;
+        height: auto;
+        display: block;
+
+        filter:
+            drop-shadow(
+                0 12px 22px rgba(0,0,0,0.45)
+            );
+    }
+
+
+    /* ================= TITLE ================= */
+
+    .hero-title {
+        width: 100%;
+    }
+
+
+    .hero-title-row h1 {
+        width: 100%;
+        margin: 25px 0 0;
+
+        direction: rtl;
+        text-align: center;
+
+        font-size: clamp(2rem, 8vw, 2.8rem);
+        line-height: 1.55;
+        letter-spacing: -0.7px;
+        font-weight: 800;
+
+        /* انیمیشن ورود از راست */
+        opacity: 0;
+        transform: translateX(70px);
+
+        animation:
+            titleReveal 1s cubic-bezier(.22,.61,.36,1) 0.45s forwards;
+    }
+
+
+    /* ================= GOLD NAME ================= */
+
+    .hero-title-row h1 span {
+        color: var(--gold);
+        font-size: 1.08em;
+        font-weight: 900;
+    }
+
+
+    /* خط زیر سالار */
+
+    .hero-title-row h1 span::after {
+        height: 3px;
+        bottom: -2px;
+
+        transform: scaleX(0);
+        transform-origin: right;
+
+        animation:
+            lineReveal 0.8s ease 1.35s forwards;
+    }
+
+
+    /* ================= DESCRIPTION ================= */
+
+    .hero-description {
+        width: 100%;
+        max-width: 500px;
+
+        margin: 22px auto 28px;
+
+        color: #dce6ef;
+
+        font-size: 1rem;
+        line-height: 2.1;
+
+        text-align: center;
+
+        /* انیمیشن از پایین */
+        opacity: 0;
+        transform: translateY(30px);
+
+        animation:
+            fadeUp 0.8s ease-out 0.75s forwards;
+    }
+
+
+    /* ================= BUTTONS ================= */
+
+    .hero-actions {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 12px;
+
+        opacity: 0;
+        transform: translateY(30px);
+
+        animation:
+            fadeUp 0.8s ease-out 0.95s forwards;
+    }
+
+
+    .hero-call {
+        width: 100%;
+        min-width: 0;
+
+        justify-content: center;
+    }
+
+
+    .hero-location {
+        width: 100%;
+        height: 58px;
+
+        justify-content: center;
+    }
+
+
+    /* ================= TRUST ================= */
+
+    .hero-trust {
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 12px 20px;
+
+        margin-top: 25px;
+
+        font-size: 0.78rem;
+
+        opacity: 0;
+        transform: translateY(30px);
+
+        animation:
+            fadeUp 0.8s ease-out 1.15s forwards;
+    }
+
+
+    /* ================= BACKGROUND ANIMATION ================= */
+
+    .hero-bg {
+        animation:
+            heroZoom 12s ease-out forwards;
+    }
+}
+
+
+/* =====================================================
+   HERO — SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding-top: 45px;
+        padding-bottom: 35px;
+    }
+
+    .hero-content {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .hero-badge {
+        font-size: 0.82rem;
+        margin-bottom: 18px;
+    }
+
+    .hero-logo {
+        width: 190px;
+        max-width: 58vw;
+        top: 20px;
+    }
+
+    .hero-title-row {
+        gap: 8px;
+    }
+
+    .hero-title-row h1 {
+        margin-top: 22px;
+        font-size: clamp(1.8rem, 8.5vw, 2.35rem);
+        line-height: 1.6;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+        line-height: 2;
+        margin-top: 18px;
+        margin-bottom: 23px;
+    }
+
+}
+
+
+/* =====================================================
+   HERO — VERY SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .hero {
+        padding-top: 35px;
+    }
+
+    .hero-logo {
+        width: 165px;
+        top: 15px;
+    }
+
+    .hero-title-row h1 {
+        font-size: 1.7rem;
+        line-height: 1.65;
+    }
+
+    .hero-description {
+        font-size: 0.84rem;
+        line-height: 1.9;
+    }
+
+}

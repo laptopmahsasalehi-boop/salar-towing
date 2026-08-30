@@ -5506,7 +5506,7 @@ button {
     position: absolute;
     inset: 0;
 
-    background-image: url("img/bghero.webp?v=3");
+    background-image: url("img/bghero-mobile.webp?v=1");
 
     background-size: cover;
     background-position: center center;

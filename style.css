@@ -277,7 +277,7 @@ button {
     inset: 0;
 
     background-image:
-        url("img/bghero.png");
+        url("img/bghero.webp?v=3");
 
     background-size: cover;
 
@@ -5486,57 +5486,129 @@ button {
 @media (max-width: 768px) {
 
     /* ================= HERO ================= */
+      /* ================= HERO MOBILE FIX ================= */
 
-    .hero {
-        min-height: auto;
-        padding: 100px 0 45px;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-    }
+.hero {
+    min-height: auto;
+    padding: 100px 0 45px;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
 
 
-    /* ================= BACKGROUND ================= */
+/* ================= BACKGROUND ================= */
 
-    .hero-bg {
+.hero-bg {
+    position: absolute;
+    inset: 0;
 
-    background-size: auto 100%;
+    background-image: url("img/bghero.webp?v=3");
+
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 
+    z-index: 0;
 
-    }
-
-
-    .hero-overlay {
-        background:
-            linear-gradient(
-                180deg,
-                rgba(5, 22, 38, 0.90) 0%,
-                rgba(5, 22, 38, 0.78) 50%,
-                rgba(5, 22, 38, 0.94) 100%
-            );
-    }
+    transform: scale(1.03);
+}
 
 
-    .hero-light {
-        width: 350px;
-        height: 350px;
-        right: -180px;
-    }
+/* ================= OVERLAY ================= */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 22, 38, 0.90) 0%,
+            rgba(5, 22, 38, 0.78) 50%,
+            rgba(5, 22, 38, 0.94) 100%
+        );
+
+    z-index: 1;
+}
 
 
-    /* ================= CONTENT ================= */
+/* ================= LIGHT ================= */
 
-    .hero-content {
-        width: 100%;
-        max-width: 100%;
-        padding: 55px 0 45px;
-        margin: 0 auto;
-        text-align: center;
-    }
+.hero-light {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    right: -180px;
+
+    z-index: 1;
+}
 
 
+/* ================= CONTENT ================= */
+
+.hero-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 55px 0 45px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+
+/* ================= LOGO ================= */
+
+.hero-logo {
+    width: 220px;
+    min-width: 0;
+    max-width: 65vw;
+
+    margin: 0 auto;
+
+    position: relative;
+    top: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*
+    مهم:
+    لوگو دیگر مخفی نمی‌ماند
+    */
+
+    opacity: 1;
+    transform: none;
+
+    animation: none;
+}
+
+
+.hero-logo img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    opacity: 1;
+    visibility: visible;
+
+    filter:
+        drop-shadow(
+            0 12px 22px rgba(0,0,0,0.45)
+        );
+}
     /* ================= BADGE ================= */
 
     .hero-badge {
@@ -5566,38 +5638,6 @@ button {
 
     /* ================= LOGO ================= */
 
-    .hero-logo {
-        width: 220px;
-        min-width: 0;
-        max-width: 65vw;
-        margin: 0 auto;
-
-        position: relative;
-        top: 25px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        /* انیمیشن ورود از چپ */
-        opacity: 0;
-        transform: translateX(-80px) scale(0.85);
-
-        animation:
-            logoReveal 1s cubic-bezier(.22,.61,.36,1) 0.25s forwards;
-    }
-
-
-    .hero-logo img {
-        width: 100%;
-        height: auto;
-        display: block;
-
-        filter:
-            drop-shadow(
-                0 12px 22px rgba(0,0,0,0.45)
-            );
-    }
 
 
     /* ================= TITLE ================= */
